@@ -15,6 +15,13 @@ basic.showLeds(`
     . # . . .
     . . # . .
     `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
 let empfind = 4
 basic.forever(function () {
     gerade = Math.min(Math.max(input.rotation(Rotation.Pitch), -45), 45)
