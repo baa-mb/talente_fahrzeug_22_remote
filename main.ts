@@ -39,10 +39,19 @@ basic.forever(function () {
     kurve = Math.round(kurve / k_empfind) * k_empfind
     kurve = Math.round(kurve / empfind * 2) * empfind * 2
     // basic.pause(100)
-    if (gerade != alt_gerade || kurve != alt_kurve) {
-        radio.sendValue("gerade", gerade)
-        radio.sendValue("kurve", kurve / 3)
-        alt_gerade = gerade
-        alt_kurve = kurve
+    if (input.buttonIsPressed(Button.A)) {
+
+
+        if (gerade != alt_gerade || kurve != alt_kurve) {
+            radio.sendValue("gerade", gerade)
+            radio.sendValue("kurve", kurve / 3)
+            alt_gerade = gerade
+            alt_kurve = kurve
+        }
+    } else {
+            radio.sendValue("gerade", 0)
+            radio.sendValue("kurve", 0)
+
+
     }
 })
