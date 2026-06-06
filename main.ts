@@ -49,5 +49,6 @@ basic.forever(function () {
         }
         alt_gerade = gerade
         alt_kurve = kurve
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })
